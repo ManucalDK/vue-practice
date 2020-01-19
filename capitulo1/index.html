@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Primeras Practivas de Vue</title>
+</head>
+<body>
+
+    <div id="app">
+        <h1>Primeros pasos con Vue:</h1>
+        <p>{{titulo}}</p>
+        <ul>
+            <li v-for='fruta of frutas'>
+                {{fruta.nombre}} - {{fruta.cantidad}}
+                <span v-if='fruta.cantidad == 0'> / Ya no Hay</span>
+            </li>
+        </ul>     
+    </div>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
