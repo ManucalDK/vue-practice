@@ -10,6 +10,9 @@
     <div id="app">
         <h1>Primeros pasos con Vue:</h1>
         <p>{{titulo}}</p>
+        <br>
+        <input type="text" v-model="nuevaFruta">
+        <button @click="agregarFruta">Agregar</button>
         <ul>
             <li v-for='fruta of frutas'>
                 {{fruta.nombre}} - {{fruta.cantidad}}
