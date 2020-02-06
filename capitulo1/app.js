@@ -15,6 +15,7 @@ const app = new Vue({
             this.frutas.push({
                 nombre: this.nuevaFruta, cantidad : Math.floor(Math.random() * 10)
             })
+            this.nuevaFruta = '';
         },
         otroMetodo(){
 

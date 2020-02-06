@@ -11,12 +11,14 @@
         <h1>Primeros pasos con Vue:</h1>
         <p>{{titulo}}</p>
         <br>
-        <input type="text" v-model="nuevaFruta">
+        <input type="text" v-model="nuevaFruta" @keyup.enter="agregarFruta">
         <button @click="agregarFruta">Agregar</button>
         <ul>
             <li v-for='fruta of frutas'>
-                {{fruta.nombre}} - {{fruta.cantidad}}
-                <span v-if='fruta.cantidad == 0'> / Ya no Hay</span>
+                <input type="number" v-model.number="fruta.cantidad">
+                {{fruta.nombre}}
+                <span v-if='fruta.cantidad <= 0'> / Ya no Hay</span>
+                <button @click="fruta.cantidad++">+</button>
             </li>
         </ul>     
     </div>
