@@ -3,6 +3,7 @@ const app = new Vue({
     data: {
         fondo:'bg-warning',
         color: false,
+        
     },
     methods: {},
 });
