@@ -1,4 +1,4 @@
-const app = new new Vue({
+const app = new Vue({
     el: '#app',
     data:{
           mensaje : 'Hola Mensaje',
@@ -11,9 +11,9 @@ const app = new new Vue({
         color(){
             return {
                 'bg-succes' : this.contador<=10,
-                'bg-warning' : this.contador>10 && contador < 60,
+                'bg-warning' : this.contador>10 && this.contador < 60,
                 'bg-danger': this.contador >= 60
-            }
+            };
         }
     },
 })
